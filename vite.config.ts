@@ -6,6 +6,10 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: './',
+    build: {
+      assetsInlineLimit: 150000,
+    },
     plugins: [
       react(),
       tailwindcss(),

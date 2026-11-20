@@ -1,3 +1,5 @@
+import milindGuitarImg from '../assets/milind-guitar.jpeg';
+
 export interface ServiceItem {
   id: string;
   title: string;
@@ -102,7 +104,7 @@ export const PROFILE = {
   linkedinHandle: 'linkedin.com/in/milind-patel-343bb0406',
   city: 'Ahmedabad, Gujarat',
   university: 'B.Tech CSE (Core) · Karnavati University, Gandhinagar',
-  portraitPath: '/assets/aistudio/WhatsApp_Image_2026-11-20_at_6.28.57_PM_704d1be2.jpeg',
+  portraitPath: milindGuitarImg,
   languages: ['English', 'Hindi', 'Gujarati'],
 };
 
