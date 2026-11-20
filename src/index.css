@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream: #F5ECE2;
+    --color-taupe: #A89F96;
+    --color-white: #FFFFFF;
+    --color-black: #050505;
+    --color-espresso: #3D230A;
+    --color-orange: #FF6B00;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* White die-cut sticker contour effect */
+.die-cut-sticker {
+  filter:
+    drop-shadow(0 0 0 #FFFFFF)
+    drop-shadow(4px 0 0 #FFFFFF)
+    drop-shadow(-4px 0 0 #FFFFFF)
+    drop-shadow(0 -4px 0 #FFFFFF)
+    drop-shadow(3px 3px 0 #FFFFFF)
+    drop-shadow(-3px 3px 0 #FFFFFF)
+    drop-shadow(3px -3px 0 #FFFFFF)
+    drop-shadow(-3px -3px 0 #FFFFFF)
+    drop-shadow(0 24px 36px rgba(17, 17, 17, 0.14));
+}
+
+/* Smooth vinyl groove spin */
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinyl-spin-slow {
+  animation: vinyl-spin 22s linear infinite;
+}
+
+.vinyl-spin-reverse {
+  animation: vinyl-spin 28s linear infinite reverse;
+}
+
+.vinyl-spin-fast {
+  animation: vinyl-spin 6s linear infinite;
+}
+
+/* Tab active glow */
+.tab-active-glow {
+  border: 1.5px solid #FF6B00;
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.4);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .vinyl-spin-slow,
+  .vinyl-spin-reverse,
+  .vinyl-spin-fast {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
